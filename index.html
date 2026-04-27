@@ -1,0 +1,2605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+     <title>Code Snippets</title>
+
+     <link href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+     <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet" />
+
+     <style>
+          html {
+               scrollbar-width: thin;
+          }
+
+          body {
+               margin: 0;
+               font-family: Arial, sans-serif;
+               background: #0f172a;
+               color: #fff;
+               padding: 20px;
+          }
+
+          h1 {
+               text-align: center;
+          }
+
+          .search-box {
+               display: block;
+               margin: 20px auto;
+               padding: 10px;
+               width: 90%;
+               max-width: 500px;
+               border-radius: 8px;
+               border: none;
+               outline: none;
+               font-size: 14px;
+          }
+
+          .container {
+               max-width: 900px;
+               margin: auto;
+          }
+
+          .snippet {
+               background: #1e293b;
+               border-radius: 12px;
+               border-top-left-radius: 0px;
+               padding: 16px;
+               margin-top: 40px;
+               margin-bottom: 40px;
+               position: relative;
+          }
+
+          .tag {
+               position: absolute;
+               font-size: small;
+               left: 0px;
+               top: -20px;
+               height: 15px;
+               padding-left: 10px;
+               padding-right: 10px;
+               padding-top: 5px;
+               padding-bottom: 5px;
+               border-radius: 6px;
+               background-color: red;
+          }
+
+          .snippet-title {
+               font-size: 17px;
+               margin-bottom: 10px;
+          }
+
+          pre {
+               margin-top: 20px !important;
+               border-radius: 8px;
+               overflow-x: auto;
+          }
+
+          .copy-btn {
+               position: absolute;
+               top: 16px;
+               right: 16px;
+               background: #0d913d;
+               border: none;
+               color: white;
+               padding: 6px 12px;
+               border-radius: 6px;
+               cursor: pointer;
+               font-size: 12px;
+               /* margin-bottom: 100px; */
+          }
+
+          .copy-btn.copied {
+               background: #3b82f6;
+          }
+
+          .file_name {
+               color: rgb(168, 113, 207);
+               font-size: smaller;
+               margin-left: 10px;
+          }
+
+          pre::-webkit-scrollbar {
+               display: none;
+               /* Chrome, Safari */
+          }
+
+          .token.key {
+               color: #4FC1FF;
+               font-weight: 500;
+          }
+
+          .token.string {
+               color: #CE9178;
+          }
+
+          .token.comment {
+               color: #6A9955;
+               font-style: italic;
+          }
+
+          .navbar {
+               display: flex;
+               padding-bottom: 10px;
+               gap: 10px;
+               justify-content: center;
+               margin-bottom: 20px;
+               flex-wrap: wrap;
+          }
+
+          .nav-btn {
+               background: #1e293b;
+               color: white;
+               border: none;
+               padding: 6px 14px;
+               border-radius: 6px;
+               cursor: pointer;
+          }
+
+          .nav-btn.active {
+               background: #22c55e;
+          }
+     </style>
+</head>
+
+<body>
+     <h1>My Code Snippets</h1>
+
+     <input type="text" class="search-box" placeholder="Search by title..." id="searchBox" />
+
+     <div class="navbar" id="navbar">
+          <button class="nav-btn active" data-section="react">React</button>
+          <button class="nav-btn" data-section="postgre-backend">Postgre Backend</button>
+          <button class="nav-btn" data-section="postgre-sql">Postgre SQL</button>
+          <button class="nav-btn" data-section="mongodb">MongoDB</button>
+          <button class="nav-btn" data-section="mongodb-backend">Mongo Backend</button>
+          <button class="nav-btn" data-section="redux">Redux</button>
+          <button class="nav-btn" data-section="git">Git</button>
+     </div>
+
+     <div class="container" id="container">
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="tag">Production ready Frontend + React + Tailwind setup</div>
+               <div class="snippet-title">Frontend Setup with Vite + React + Tailwind<span class="file_name">terminal
+                         commands</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+# create project folder first 
+npm create vite@latest
+
+# inputs during setup:
+# y
+# project name → client
+# framework → react
+# variant → javascript
+# rolldown vite → no
+# install deps → y
+
+cd client
+
+# install tailwind (vite plugin)
+npm install tailwindcss @tailwindcss/vite
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="snippet-title">Frontend Setup with Vite + React + Tailwind<span class="file_name">
+                         edit vite.config.js </span> file</div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+});
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="snippet-title">Frontend Setup with Vite + React + Tailwind V4<span class="file_name">
+                         edit index.css file</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+/* if we want to apply google fonts in our react , then we need to put its @import url('link') above the tailwindcss import statement
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: "Outfit", sans-serif;
+}
+
+*/
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-css"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="tag">Package installation for React + Tailwind + Axios + react-router-dom</div>
+               <div class="snippet-title">Frontend Setup with Vite + React + Tailwind + Axios <span class="file_name">
+                         install packages</span> file</div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+npm install axios react-router-dom  # cors package is not installed in frontend .
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="tag">Routing in react with react-router-dom</div>
+               <div class="snippet-title">Frontend Setup : react-router-dom<span class="file_name">
+                         import browser router in main.jsx file</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import { BrowserRouter } from 'react-router-dom'
+
+createRoot(document.getElementById('root')).render(
+     <BrowserRouter >
+          <StrictMode>
+               <App />
+          </StrictMode>
+     </BrowserRouter>,
+)
+
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="snippet-title">Frontend Setup in React + Nested Routing with react-router-dom<span
+                         class="file_name">
+                         App.jsx file</span></div>
+               <button disabled class="copy-btn">Not for Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import Layout from './pages/Layout.jsx'
+import Dashboard from './pages/Dashboard.jsx'
+import Study from './pages/Study.jsx'
+import Masti from './pages/Masti.jsx'
+import View from './pages/View.jsx'
+
+const App = () => {
+     return (
+          &lt;Routes &gt;
+
+               &lt;Route path="/" element={&lt;Home /&gt;} /&gt; 
+
+               &lt;Route path="app" element={&lt;Layout /&gt;} &gt;
+                    &lt;Route index element={&lt;Dashboard /&gt;} /&gt;
+                    &lt;Route path="study" element={&lt;Study /&gt;} /&gt;
+                    &lt;Route path="masti" element={&lt;Masti /&gt;} /&gt;
+               &lt;/Route&gt;
+
+               &lt;Route path="/view" element={&lt;View /&gt;} /&gt; 
+     
+          &lt;/Routes&gt;
+     )
+}
+
+export default App
+
+
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="snippet-title">Frontend Setup + React + Nested Routing with react-router-dom<span
+                         class="file_name">
+                         Layout.jsx file</span></div>
+               <button disabled class="copy-btn">Not for Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Navbar from '../components/Navbar.jsx'
+
+const Layout = () => {
+     return (
+          <div className='w-full min-h-screen bg-gray-50' >
+               <Navbar /> {/* visible on each page , always  same*/}
+               <Outlet /> {/* variable content , defined in app.jsx routing . Vo page ya component dikhega jisse url match karega. Pages Load inside Outlet.*/}
+          </div>
+     )
+}
+
+export default Layout
+
+
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="snippet-title">Frontend Setup + React + Nested Routing with react-router-dom<span
+                         class="file_name">
+                         Navbar.jsx file</span></div>
+               <button disabled class="copy-btn">Not for Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const Navbar = () => {
+     return (
+          <div className='w-full bg-gray-800 text-white h-16 px-4 flex items-center justify-around'>
+               <h1 className='text-xl font-bold'>
+                    <Link to="/">My App</Link>
+               </h1>
+               <div>
+                    <Link to="/app" className='ml-4 hover:text-gray-400'>Dashboard</Link>
+                    <Link to="/app/study" className='ml-4 hover:text-gray-400'>Study</Link>
+                    <Link to="/app/masti" className='ml-4 hover:text-gray-400'>Masti</Link>
+               </div>
+               <h1 className='text-md'>
+                    <Link to="/view">View</Link>
+               </h1>
+          </div>
+     )
+}
+
+export default Navbar
+
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="tag">React + Tailwind Theme Toggler Code</div>
+               <div class="snippet-title">Frontend Setup with Vite + React + Tailwind V4<span class="file_name">
+                         App.jsx </span> Theme toggler file</div>
+               <button disabled class="copy-btn">Not for Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+
+import { useEffect, useState } from "react";
+
+export default function App() {
+
+     const [theme, setTheme] = useState(() =>
+          localStorage.getItem("theme") || "light"
+     );
+
+     useEffect(() => {
+          document.documentElement.classList.toggle("dark", theme === "dark");
+          localStorage.setItem("theme", theme);
+     }, [theme]);
+
+     return (
+          // transition-colors un elements pe lagana hai jinka color change hoga, aur duration-500 se transition ki speed set kar sakte hai.
+          &lt;div className="transition-colors duration-500 min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black text-black dark:text-white"&gt;
+
+               &lt;h1 className="text-3xl font-bold mb-4"&gt;
+                    Dark Mode Test 🚀
+               &lt;/h1&gt;
+          
+               &lt;button
+                    onClick={() =&gt; setTheme(theme === "light" ? "dark" : "light")}
+                    className="cursor-pointer px-5 py-2 rounded-lg 
+                         bg-gray-200 dark:bg-gray-800 
+                         hover:bg-gray-300 dark:hover:bg-gray-700
+                         transition-all duration-200"
+               &gt;
+                    Toggle Dark Mode
+               &lt;/button&gt;
+
+          &lt;/div&gt;
+     );
+}
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="snippet-title">Frontend Setup with Vite + React + Tailwind<span class="file_name">
+                         start frontend </span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+npm run dev          
+               </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="snippet-title">Frontend Setup with Vite + React + react-router-dom + Tailwind + Axios <span
+                         class="file_name">
+                         folder structure </span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+src/
+ ├── assets/                  # this folder will contain icons / logos
+ ├── App.css                  # delete this file
+ ├── App.jsx                  # empty this file and make functional component by typing rafce ( routing page )
+ ├── index.css                # empty this file and add tailwind import statement along with dark theme enabler
+ ├── main.jsx
+ ├── api/
+ │    └── api.js              # setup axios here and give backend running port .
+ │
+ ├── pages/
+ │    ├── Dashboard.jsx
+ │    ├── Home.jsx
+ │    ├── Login.jsx
+ │    └── Logout.jsx
+ │
+ ├── components/
+ │    ├── Navbar.jsx
+ │    ├── Footer.jsx
+ │    └── Card.jsx 
+               </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="tag">Connecting React Frontend with backend</div>
+               <div class="snippet-title">Connecting React Frontend with backend <span class="file_name">Frontend's
+                         .env</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+# Frontend me dotenv package install nhi kiya jata .
+
+VITE_API_URL=http://localhost:8000 
+
+# vo backend endpoint hai jispar hame request bhejni hai , it is necessary that its name starts with vite
+# otherwise we will get "client password must be string error" because we are using .env file without dotenv package . Name must start with vite .
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-none"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="snippet-title">Connecting React Frontend with backend and making API with axios <span
+                         class="file_name">src / api / api.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import axios from "axios"; 
+
+const api = axios.create({ 
+     baseURL: import.meta.env.VITE_API_URL, 
+     withCredentials: true, 
+}); 
+
+export default api;
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="react">
+               <div class="snippet-title">Connecting React Frontend with backend and making request from Frontend <span
+                         class="file_name">src / App.jsx</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import React from 'react'
+import { useState, useEffect } from 'react';
+import api from "./api";
+
+
+const App = () => {
+
+     const [messages, setMessages] = useState([]);
+
+
+     // this function runs once on the page load
+     useEffect(() => {
+          fetchMessages();
+     }, []);
+
+
+     const fetchMessages = async () => {
+          try {
+               const res = await api.get("/messages");
+               setMessages(res.data);
+          } catch (err) {
+               console.log("Fetch error:", err);
+          }
+     };
+
+
+     return (
+          
+     )
+}
+
+export default App
+                    
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-jsx"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="tag">Production Ready Backend + PostgreSQL setup</div>
+               <div class="snippet-title">Backend setup with Postgre SQL <span class="file_name">terminal
+                         commands</span>
+               </div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+mkdir backend                      # make a backend folder in the project directory
+cd backend                         # move into the backend folder
+
+npm init -y                        # to make the package.json file
+
+npm i express dotenv cors pg       # install necessary packages , cors package sirf backend me install kiya jata hai.
+npm i -D nodemon                   # install nodemon as dev dependency
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="snippet-title">Backend Setup with PostgreSQL <span class="file_name">
+                         folder structure </span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+backend/
+ ├── node_modules/                  
+ ├── configs/
+ │    └── dotenv.js          
+ ├── controllers/                  
+ │    └── taskController.js          
+ ├── db/
+ │    └── db.js          
+ ├── routes/
+ │    └── taskRoutes.js
+ ├── src/
+ │    ├── server.js
+ │    └── app.js 
+ ├── .env                  
+ ├── package-lock.json              
+ └── package.json
+               </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="snippet-title">Backend setup with Postgre SQL edit <span
+                         class="file_name">package.json</span>
+               </div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+{
+     "name": "backend",
+     "version": "1.0.0",
+     "type": "module",                  // ecmascript modern syntax
+     "main": "src/server.js",               // starting file
+     "scripts": {
+          "start": "node src/server.js"  // fire npm run start to run backend in production
+          "dev": "nodemon src/server.js"  // fire npm run dev to run backend in development mode
+     }
+}
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="snippet-title">Backend setup with PostgreSQL DB connection <span class="file_name">backend's
+                         .env</span> file
+               </div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+PORT=8000                          # backend running port
+
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=12345
+DB_NAME=testdb
+
+FRONTEND_URL=http://localhost:5173 # Frontend is running on this port
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"><code class="language-none"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="snippet-title">PostgreSQL common <span class="file_name">config / dotenv.js </span> file
+               </div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import dotenv from "dotenv";
+dotenv.config();                          
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="snippet-title">PostgreSQL common <span class="file_name">db / db.js</span> file </div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import pkg from "pg";
+const { Pool } = pkg;
+
+
+
+
+
+const pool = new Pool({
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT, // db port 5432
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+});
+
+
+
+
+
+export const connectDB = async () => {
+     try {
+          const client = await pool.connect();
+          console.clear();
+          console.log("DB connected successfully");
+     } catch (err) {
+          console.error("PostgreSQL connection failed", err);
+          throw err; 
+     }
+};
+
+
+
+
+
+export default pool;       
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="snippet-title">Backend setup with express + postgres <span class="file_name">src /
+                         app.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import express from 'express'; // must to have package 
+const app = express();         // app setup
+app.use(express.json());       // to add body property in the request
+
+
+
+
+
+import cors from 'cors';       // must to have 
+app.use(cors({                 // cors setup with frontend url
+     origin: process.env.FRONTEND_URL,
+     credentials: true
+}));
+
+
+
+
+
+// mount routes here
+import taskRoutes from '../routes/taskRoutes.js';
+app.use('/api/tasks', taskRoutes );
+
+
+
+
+
+export { app };
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="snippet-title">Backend setup with express + postgres <span class="file_name">src /
+                         server.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import '../configs/dotenv.js'
+import { connectDB } from '../db/db.js';    // ab is pool variable se queries run hongi
+import { app } from './app.js';
+
+
+
+
+
+const PORT = process.env.PORT || 8000;
+connectDB()
+     .then(() => {
+          app.listen(PORT, () => {
+               console.log(`Server is running on port ${PORT}`);
+          });
+     })
+     .catch((error) => {
+          console.error("Failed to connect to the database", error);
+     });
+
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="snippet-title">Backend setup main with express + starting basic <span
+                         class="file_name">routes / taskRoutes.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import { Router } from "express";
+const router = Router();
+
+
+
+
+
+import { deleteTask, saveTask, fetchAllTasks, updateTask, toggleTaskIsDone } from '../controllers/taskController.js';
+
+
+
+
+
+router.get('/messages', fetchAllTasks);
+router.post('/save', saveTask);
+router.put('/update/:id', updateTask);
+router.put('/toggleCheckbox/:id', toggleTaskIsDone);
+router.delete('/delete/:id', deleteTask);
+
+
+
+
+
+export default router;
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="snippet-title">Backend setup with express + postgres <span class="file_name">controllers /
+                         taskController.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import pool from "../db/db.js";
+
+
+
+export const deleteTask = async (req, res) => {
+
+     const { id } = req.params;
+
+     try {
+          await pool.query('DELETE FROM messages WHERE id = $1', [id]);
+          res.status(200).json({ message: 'Deleted Successfully' });
+     } catch (err) {
+          console.log(err);
+          res.status(500).json({ error: 'Delete failed' });
+     }  
+}
+
+
+
+
+
+export const saveTask = async (req, res) => {
+     
+     const { text } = req.body;
+
+     try {
+          await pool.query('INSERT INTO messages (text) VALUES($1) RETURNING * ', [text]);
+          res.sendStatus(200);// success signal
+     } catch (err) {
+          res.status(500).send('ERROR');
+     }
+}
+
+
+
+
+
+
+export const fetchAllTasks = async (req, res) => {
+     try {
+          const result = await pool.query('SELECT * FROM messages ORDER by id DESC');
+          res.json(result.rows);
+     } catch (err) {
+          console.error(err);
+          res.status(500).send('Error');
+     }
+}
+
+
+
+
+
+export const updateTask = async (req, res) => {
+     try {
+          const { id } = req.params;
+          const { text } = req.body;
+
+          await pool.query('UPDATE messages SET text = $1 WHERE id = $2', [text, id]);
+          res.sendStatus(200);// success signal
+     } catch (err) {
+          console.log(err.message);
+          res.status(500).send('Server Error 05');
+     }
+}
+
+
+
+
+
+
+
+export const toggleTaskIsDone = async (req, res) => {
+     try {
+          const { id } = req.params;
+          const { completed } = req.body;
+
+          await pool.query('UPDATE messages SET completed = $1 WHERE id = $2', [!completed, id]);
+          res.sendStatus(200);// success signal
+     } catch (err) {
+          console.log(err.message);
+          res.status(500).send('Server Error 07');
+     }
+}
+
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-backend">
+               <div class="tag">PERN Stack api handling </div>
+               <div class="snippet-title">PERN stack frontend and backend interaction via api<span class="file_name">js
+                         code</span>
+               </div>
+               <button disabled class="copy-btn">Not for Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+// frontend CREATE
+
+// add data in the database
+const handleSubmit = async () => {
+
+     try {
+          await api.post("/save", { text: inputText });
+     } catch (err) {
+          console.log("Here is the valuable error.", err);
+     }
+
+     setText("");
+     fetchMessages();
+};
+
+// backend 
+
+//API route to save the messages in the db
+app.post('/save', async (req, res) => {
+
+     const { text } = req.body;
+
+     try {
+          await pool.query('INSERT INTO messages (text) VALUES($1)', [text]);
+          res.sendStatus(200);// success signal
+     } catch (err) {
+          console.error(err);
+          res.status(500).send('ERROR');
+     }
+});
+
+
+
+
+
+// frontend READ
+
+// fetching content to populate frontend 
+const fetchMessages = async () => {
+     try {
+          const res = await api.get("/messages");
+          setMessages(res.data);
+     } catch (err) {
+          console.log("Fetch error:", err);
+     }
+};
+
+// api route to display messages on the frontend 
+app.get('/messages', async (req, res) => {
+     try {
+          const result = await pool.query('SELECT * FROM messages ORDER by id DESC');
+          res.json(result.rows);
+     } catch (err) {
+          console.error(err);
+          res.status(500).send('Error');
+     }
+});
+
+
+
+
+
+// frontend UPDATE
+
+// update data in the database
+const handleUpdateNote = async () => {
+     await api.put(`/update/${editWalaContent.id}`, { text: editWalaContent.text });
+     setShowEditBox(false);
+     setEditWalaContent({ id: null, text: "" });
+     fetchMessages();
+};
+
+// backend
+
+// api route to update a specific note in the db
+app.put('/update/:id', async (req, res) => {
+     try {
+          const { id } = req.params;
+          const { text } = req.body;
+
+          await pool.query('UPDATE messages SET text = $1 WHERE id = $2', [text, id]);
+          res.sendStatus(200);// success signal
+     } catch (err) {
+          console.log(err.message);
+          res.status(500).send('Server Error 05');
+     }
+})
+
+
+
+
+
+// frontend DELETE
+
+// delete data from the database
+const handleDelete = async (id) => {
+     if (confirm("Are you sure you want to delete this ?")) {
+          try {
+               const res = await api.delete(`/delete/${id}`);
+               alert(res.data.message); // show backend message "Deleted Successfully"
+               fetchMessages();
+          } catch (err) {
+               console.log("Delete error.", err);
+          }
+     }
+     return;
+};
+
+// backend
+
+app.delete('/delete/:id', async (req, res) => { // backend api endpoint 
+
+     const { id } = req.params;
+
+     try {
+          await pool.query('DELETE FROM messages WHERE id = $1', [id]);
+          res.status(200).json({ message: 'Deleted Successfully' });
+     } catch (err) {
+          console.log(err);
+          res.status(500).json({ error: 'Delete failed' });
+     }
+});
+
+
+               </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-sql">
+               <div class="snippet-title">Backend setup DB and Table creating sql query <span
+                         class="file_name">db.sql</span>
+               </div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+CREATE DATABASE testdb;
+
+-- connect to testdb then run:
+CREATE TABLE messages (
+     id SERIAL PRIMARY KEY,
+     text VARCHAR(255),
+     completed BOOLEAN DEFAULT false
+);
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-sql"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="postgre-sql">
+               <div class="tag">Postgres SQL Reference Queries</div>
+               <div class="snippet-title">Dummy Reference SQL Query <span class="file_name">db.sql</span>
+               </div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+-- =========================
+-- Countries Table
+-- =========================
+CREATE TABLE countries (
+    id SERIAL PRIMARY KEY
+        -- SERIAL: auto-increment integer (Postgres way)
+
+    ,name VARCHAR(100) NOT NULL UNIQUE
+        -- VARCHAR(100): max 100 chars
+        -- NOT NULL: required
+        -- UNIQUE: no duplicate country names
+);
+
+
+
+-- =========================
+-- Users Table
+-- =========================
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY
+        -- unique id, auto-increment
+
+    ,username VARCHAR(50) NOT NULL UNIQUE
+        -- short text, must be unique
+
+    ,email VARCHAR(100) NOT NULL UNIQUE
+        -- email stored as string, unique + required
+
+    ,password_hash TEXT NOT NULL
+        -- TEXT: long string (hashed password)
+
+    ,title TEXT NOT NULL 
+        -- TEXT: for unknown length , no limit 
+
+    ,age INT CHECK (age >= 0)
+        -- INT: numeric
+        -- CHECK: prevents negative values
+
+    ,salary DECIMAL(10,2) DEFAULT 0.00
+        -- DECIMAL(10,2): exact value (10 digits, 2 decimal places)
+        -- used for money (never FLOAT)
+
+    ,is_active BOOLEAN DEFAULT TRUE
+        -- BOOLEAN: true/false flag
+        -- default user is active
+
+    ,date_of_birth DATE
+        -- DATE: YYYY-MM-DD format
+
+    ,created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        -- auto set when row is inserted
+
+    ,updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        -- ⚠️ Postgres does NOT auto-update this
+        -- need trigger if you want auto-update
+
+    ,role TEXT DEFAULT 'user'
+        CHECK (role IN ('user', 'admin', 'moderator'))
+        -- ENUM alternative in Postgres
+        -- flexible + easy to modify
+
+    ,preferences JSONB
+        -- JSONB: binary JSON (faster, indexable)
+
+    ,country_id INT
+        -- foreign key reference
+
+    ,CONSTRAINT fk_country
+        FOREIGN KEY (country_id)
+        REFERENCES countries(id)
+        ON DELETE SET NULL
+        -- if country deleted → keep user but nullify ref
+
+        ON UPDATE CASCADE
+        -- if country id changes → update here automatically
+);
+
+
+-- =========================
+-- Trigger Function 
+-- =========================
+
+-- function to update timestamp
+CREATE OR REPLACE FUNCTION update_updated_at_column()
+RETURNS TRIGGER AS $$
+BEGIN
+   NEW.updated_at = CURRENT_TIMESTAMP;
+   RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- trigger
+CREATE TRIGGER set_updated_at
+BEFORE UPDATE ON users
+FOR EACH ROW
+EXECUTE FUNCTION update_updated_at_column();
+
+
+
+
+-- =========================
+-- Upsert command in Postgres
+-- =========================
+
+INSERT INTO videos (video_id, title, views)
+VALUES ('abc123', 'My Video', 100)
+ON CONFLICT (video_id)
+DO UPDATE SET
+  title = EXCLUDED.title,
+  views = EXCLUDED.views;
+
+-- if video_id = abc123 does not exist in the db , insert this data. 
+-- if video_id = abc123 already exists in the db , update its title and views.
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-sql"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb">
+               <div class="tag">MongoDB Data Modelling </div>
+               <div class="snippet-title">Backend MongoDB Data Modeling Common code snippet <span
+                         class="file_name">models/any.model.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema({} , {timestamps : true})
+
+export const User = mongoose.model("User" , userSchema)
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb">
+               <div class="snippet-title">Backend MongoDB Data Modeling <span
+                         class="file_name">models/category.model.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import mongoose from "mongoose";
+
+const categorySchema = new mongoose.Schema({
+     name : {
+          type: String ,
+          required: true, 
+          unique: true
+     },
+     createdAt: {
+          type: Date,
+          default: Date.now
+     }
+} , {timestamps : true})
+
+export const Category = mongoose.model("Category" , categorySchema)
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb">
+               <div class="snippet-title">Backend MongoDB Data Modeling <span
+                         class="file_name">models/todo.model.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import mongoose from "mongoose";
+
+const todoSchema = new mongoose.Schema({
+     task : {
+          type: String ,
+          required: true, 
+     },
+     completed: {
+          type: Boolean,
+          default: false
+     },
+     category: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Category", 
+          required: true
+     }
+     createdAt: {
+          type: Date,
+          default: Date.now
+     }
+} , {timestamps : true})
+
+export const Todo = mongoose.model("Todo" , todoSchema)
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="tag">Backend MongoDB setup</div>
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span
+                         class="file_name">Project folder : MERN Todo App/</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+mkdir backend
+cd backend
+
+npm init -y
+
+New-Item Readme.md       # to create a new file 
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="git">
+               <div class="snippet-title">Git Initialization<span
+                         class="file_name">bash terminal commands</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+# Whenever we want to initialize a git repository in the backend folder , here are the commands:
+# Be in the project root and not inside the backend folder and run these commands:
+
+git init
+git add .
+git commit -m "Initial commit"
+
+# Then go on the github and create a new repository without Readme file and gitignore.
+
+git branch -M main # to rename the existing branch to main
+git remote add origin <repository url>
+git push -u origin main
+
+# git does not tracks and pushes empty folders .
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span
+                         class="file_name">Project folder : MERN Todo App/backend</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+# Making folder structure in the backend folder
+
+cd backend
+mkdir public           # for static files like images
+cd public
+mkdir uploads          # for uploaded files like profile pics
+
+cd uploads 
+New-Item .gitkeep      # because git does not track empty folders , so we add this .gitkeep file to track this uploads folder in git
+
+cd ../..               # to come back to the backend folder
+
+New-Item .gitignore    # to create a .gitignore file in the backend folder
+
+# Now use a free gitignore generator to generate a node gitignore file and copy paste its content in the backend's .gitignore file to ignore node_modules and other unnecessary files from git tracking and pushing.
+
+New-Item .env          # to create a .env file in the backend folder
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span
+                         class="file_name">/backend folder setup</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+# Now we are going to create an src folder in which all of our code will go.
+
+mkdir src
+cd src
+
+# These comma seperated commands are for powershell .
+
+New-Item index.js, app.js, constants.js     # to create these files in the src folder
+
+mkdir controllers, db, middlewares, models, routes, utils
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup<span class="file_name">/backend folder
+                         structure</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+backend/
+│
+├── public/
+│   └── uploads/
+│       └── .gitkeep
+│
+├── src/
+│   ├── index.js
+│   ├── app.js
+│   ├── constants.js
+│   │
+│   ├── controllers/
+│   ├── db/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   └── utils/
+│
+├── .gitignore
+├── .env
+├── Readme.md
+├── package.json
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span
+                         class="file_name">Package installation</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+# Installing backend dependencies
+
+npm i -D nodemon
+npm i express mongoose dotenv cors cookie-parser
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span
+                         class="file_name">Project folder : MERN Todo App / backend</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+//   Edit package.json file to be compatible with the latest es6 syntax 
+
+{
+     "type": "module",
+     "main": "src/index.js",
+     "scripts": {
+          "start": "nodemon src/index.js"
+     }
+}
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span
+                         class="file_name">Adding data to the backend / .env file</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+PORT=8000
+MONGODB_URI=mongodb+srv://user:password@cluster0.9kmaxor.mongodb.net/app-name?appName=Cluster0
+CORS_ORIGIN=http://localhost:5173  # frontend is running on this port
+
+# user is the username of the mongodb atlas cluster and password is the password of that username and app-name is the name of the database in which we want to store our data .
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre style="background-color: #272822;padding: 20px;"
+                    class="line-numbers"><code class="language-none"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span class="file_name">Main
+                         code backend / src / db / db.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+
+// Database se baat karne wale code ko try catch me wrap karo aur async await ka hamesha use karo. 
+
+// db.js file is meant to do some specific tasks .
+
+// @ db connection
+// @ dotenv setup
+// @ dns setup to avoid db connection error
+
+
+import mongoose from "mongoose";
+
+
+import dotenv from "dotenv";
+dotenv.config();
+
+
+import dns from "dns";
+dns.setServers(
+     ['1.1.1.1']
+)
+
+
+const connectDB = async () => {
+     try {
+          const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}`);
+          console.log("DB connected successfully");
+     } catch (error) {
+          console.log("DB connection error 1 :", error);
+          process.exit(1);
+     }
+}
+
+
+export default connectDB;
+
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span class="file_name">Main
+                         code backend / src / app.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+// Initializes and configures the Express application.
+// Sets up middlewares for CORS, JSON & URL-encoded parsing, cookies, and static file serving.
+
+// app.js file is meant to do some specific tasks .
+
+// @ import express and make app from it
+// @ setup cors
+// @ setup body parser of express for json and urlencoded data
+// @ routes mounting : base path define karte hai , actual endpoints routes file me hote hai.
+
+
+import express from 'express';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
+
+
+const app = express();
+
+
+app.use(cors({
+     origin: process.env.CORS_ORIGIN,
+     credentials: true,
+}));
+
+
+app.use(express.json({
+     limit: "16kb"
+}));
+
+
+app.use(express.urlencoded({
+     extended: true,
+     limit: "16kb"
+}))
+
+
+// public folder me ham apne static files , images rakhte hain.
+app.use(express.static("public"));
+
+
+import taskRouter from "./routes/TaskRouter.js";
+app.use('/api/tasks', taskRouter);
+
+
+export { app };
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span class="file_name">Main
+                         code backend / src / index.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+// We have already setted up the dotenv in the db.js file , so we just need to import the connectDB function from db.js file and call it here to connect to the database.
+
+
+// index.js file is meant to do some specific tasks .
+
+// @ first of all import db.js file 
+// @ then import app from app.js file
+// @ connect to the db and app.listen 
+
+
+import connectDB from "./db/db.js";
+import { app } from "./app.js";
+
+
+const port = process.env.PORT || 8000
+
+
+connectDB()
+.then(() => {
+     app.listen( port , () => {
+        console.log(`Server is running on port ${port}`);
+     });
+})
+.catch((error) => {
+    console.error("Failed to connect to the database", error);
+});
+
+
+// writing the api end points
+// testing endpoint : open http://localhost:8000
+app.get('/', (req, res) => {
+     res.send('Hello from my app');
+})
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span class="file_name">Main
+                         code backend / src / Routes / TaskRouter.js </span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+// create router with express 
+import { Router } from 'express';
+const router = Router();
+
+
+
+
+
+// import all the controllers
+import { createTask, fetchAllTasks, updateTaskById, deleteTaskById, toggleTaskIsDone  } from '../Controllers/TaskController.js';
+
+
+
+
+
+// all the routes are here
+router.get('/', fetchAllTasks);
+router.post('/', createTask);
+router.put('/:id', updateTaskById);
+router.patch('/toggleIsDone/:id', toggleTaskIsDone);
+router.delete('/:id', deleteTaskById);
+
+
+
+
+
+export default router; 
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="mongodb-backend">
+               <div class="snippet-title">Production Ready Backend Setup With MongoDB Atlas<span class="file_name">Main
+                         code backend /src / Controllers / taskController.js </span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+// TaskController.js is meant to do some specific task
+
+// @ import TaskModel if its mongodb and pool if it is postgres 
+// @ db interaction 
+// @ export controller functions from here
+
+
+
+
+
+import TaskModel from "../Models/task.model.js"
+
+
+
+
+
+// define controller functions here and export them 
+export const createTask = async (req, res) => {
+     const data = req.body;
+     try {
+          const model = new TaskModel(data);
+          await model.save();
+          res.status(201).json({message: 'Task is created' , success: true})
+     } catch {
+          res.status(500).json({message: "Failed to create task" , success: false});
+     }
+}
+
+
+
+
+
+export const fetchAllTasks = async (req, res) => {
+     try {
+          const data = await TaskModel.find({}).sort({ createdAt: -1 });
+          res.status(200).json({message: 'All Tasks' , success: true, data})
+     } catch (error) {
+          res.status(500).json({message: "Failed to fetch tasks" , success: false});
+     }
+}
+
+
+
+
+
+export const updateTaskById = async (req, res) => {
+     try {
+          const id = req.params.id;
+          const body = req.body;
+          await TaskModel.findByIdAndUpdate(id, body, { new: true });
+          res.status(200).json({message: 'Task updated' , success: true })
+     } catch {
+          res.status(500).json({message: "Failed to update task" , success: false});
+     }
+}
+
+
+
+
+
+export const toggleTaskIsDone = async (req, res) => {
+     try {
+          const id = req.params.id;
+          const task = await TaskModel.findById(id);
+          if (!task) {
+               return res.status(404).json({message: 'Task not found', success: false});
+          }
+          task.isDone = !task.isDone;
+          await task.save();
+          res.status(200).json({message: 'Task updated' , success: true })
+     } catch {
+          res.status(500).json({message: "Failed to update task" , success: false});
+     }
+}
+
+
+
+
+
+
+export const deleteTaskById = async (req, res) => {
+     try {
+          const id = req.params.id;
+          await TaskModel.findByIdAndDelete(id);
+          res.status(200).json({message: 'Task is Deleted' , success: true })
+     } catch {
+          res.status(500).json({message: "Failed to delete task" , success: false});
+     }
+}
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="redux">
+               <div class="tag">Redux Toolkit Setup</div>
+               <div class="snippet-title">Using Redux state management to make a counter<span class="file_name">Package
+                         installation</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+npm i @reduxjs/toolkit react-redux
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="redux">
+               <div class="snippet-title">Using Redux state management to make a counter<span class="file_name">Making
+                         the folder structure + files</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+cd src; mkdir features; cd features; mkdir counter; cd counter; New-Item counterSlice.js; cd ../../..
+cd src; mkdir redux; cd redux; New-Item store.js; cd ../..
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-bash"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="redux">
+               <div class="snippet-title">Using Redux state management to make a counter<span class="file_name">src /
+                         redux / store.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+// configure store
+
+import { configureStore } from '@reduxjs/toolkit'
+
+export default configureStore({
+  reducer: {}
+})
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="redux">
+               <div class="snippet-title">Using Redux state management to make a counter<span class="file_name">Provider
+                         wrap in main.jsx</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import { Provider } from 'react-redux'
+import { store } from '../src/redux/store.js'
+
+
+// So that all the store variables are accessible in the entire App
+createRoot(document.getElementById('root')).render(
+     <Provider store={store}>
+          <App />
+     </Provider>
+)
+               </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="redux">
+               <div class="snippet-title">Using Redux state management to make a counter<span class="file_name">src /
+                         features / counter / counterSlice.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import { createSlice } from '@reduxjs/toolkit'
+
+
+// Slice ke andar initial state hoti hai aur reducer functions hote hai
+export const counterSlice = createSlice({
+     name: 'counter',
+     initialState: {
+          value: 0
+     },
+     reducers: {
+          increment: state => {
+               state.value += 1
+          },
+          decrement: state => {
+               state.value -= 1
+          },
+          incrementByAmount: (state, action) => {
+               state.value += action.payload
+          }
+     }
+})
+
+// Action creators are generated for each case reducer function
+export const { increment, decrement, incrementByAmount } = counterSlice.actions
+
+export default counterSlice.reducer
+          </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="redux">
+               <div class="snippet-title">Using Redux state management to make a counter<span class="file_name">Register
+                         Slice reducers in the store.js</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from '../features/counter/counterSlice'
+
+export default configureStore({
+  reducer: {
+    counter: counterReducer
+  }
+})
+               </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="redux">
+               <div class="snippet-title">Using Redux state management to make a counter<span class="file_name">Create a
+                         Counter Component : components / Counter.jsx</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '../features/counter/counterSlice.js'
+
+
+// now counter component does not need props . jo bhi data is component ko chahiye tha . vo sabhi ise milgaya.
+// state variable bhi jisse UI update hoti hai , aur uska setter function bhi .
+export function Counter() {
+     const count = useSelector(state => state.counter.value)
+     const dispatch = useDispatch()
+
+     return &lpar;
+          // Main Container: Screen ke beech mein lane ke liye aur dark background ke liye
+          <div className="flex min-h-screen items-center justify-center bg-slate-950 p-4">
+
+               <div className="flex flex-col items-center gap-6 rounded-2xl bg-slate-900 p-8 shadow-2xl border border-slate-800">
+
+                    <h1 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+                         Redux Counter
+                    </h1>
+
+                    <div className="flex items-center gap-8">
+                         {/* Decrement Button */}
+                         &lt;button
+                              className="flex h-12 w-12 items-center justify-center rounded-full bg-red-500/10 text-2xl font-bold text-red-500 transition-all hover:bg-red-500 hover:text-white active:scale-90"
+                              aria-label="Decrement value"
+                              onClick= &lbrace; &lpar; => dispatch(decrement())}
+                         &gt;
+                              -
+                         </button>
+
+                         {/* Count Display */}
+                         <span className="text-6xl font-mono font-bold text-white tabular-nums">
+                              {count}
+                         </span>
+
+                         {/* Increment Button */}
+                         &lt;button
+                              className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-2xl font-bold text-emerald-500 transition-all hover:bg-emerald-500 hover:text-white active:scale-90"
+                              aria-label="Increment value"
+                              onClick={() => dispatch(increment())}
+                         &gt;
+                              +
+                         </button>
+                    </div>
+
+                    <p className="text-xs text-slate-400">
+                         Click the buttons to update the state
+                    </p>
+               </div>
+          </div>
+     &rpar;
+&rbrace;
+               </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="snippet" data-section="redux">
+               <div class="snippet-title">Using Redux state management to make a counter<span class="file_name">Mount
+                         the Counter in the App.jsx</span></div>
+               <button class="copy-btn">Copy</button>
+
+               <!-- RAW CODE (paste here normally) -->
+               <textarea class="raw-code" style="display:none;">
+import React from 'react'
+import { Counter } from './components/Counter'
+
+const App = () => {
+     return (
+          <div>
+               // now there is no need to pass props to this counter component
+               <Counter />
+          </div>
+     )
+}
+
+export default App
+
+               </textarea>
+
+               <!-- RENDERED CODE -->
+               <pre class="line-numbers"><code class="language-js"></code></pre>
+          </div>
+
+
+
+
+
+
+     </div>
+
+     <script>
+          window.Prism = window.Prism || {};
+          Prism.manual = true;
+     </script>
+
+     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-jsx.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+     <script>
+
+          // Copy button
+          document.querySelectorAll('.copy-btn').forEach(btn => {
+               btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const snippet = btn.closest('.snippet');
+                    const code = snippet.querySelector('.raw-code').value.trim();
+
+                    navigator.clipboard.writeText(code).then(() => {
+                         btn.textContent = 'Copied!';
+                         btn.classList.add('copied');
+
+                         setTimeout(() => {
+                              btn.textContent = 'Copy';
+                              btn.classList.remove('copied');
+                         }, 1500);
+                    });
+               });
+          });
+
+
+          // 2. Render + custom formatting
+          document.querySelectorAll('.snippet').forEach(snippet => {
+               const raw = snippet.querySelector('.raw-code').value.trim();
+               const codeEl = snippet.querySelector('code');
+
+               if (codeEl.classList.contains('language-none')) {
+                    const formatted = raw
+                         .replace(/^#(.+)$/gm, '<span class="token comment">#$1</span>')
+                         .replace(/^(\w+)=(.+?)(\s+#.*)?$/gm,
+                              '<span class="token key">$1</span>=<span class="token string">$2</span><span class="token comment">$3</span>'
+                         );
+
+                    codeEl.innerHTML = formatted;
+
+               } else {
+                    codeEl.textContent = raw;
+               }
+          });
+
+          // 3. RUN PRISM ONLY ONCE
+          document.querySelectorAll('code').forEach(codeEl => {
+               if (!codeEl.classList.contains('language-none')) {
+                    Prism.highlightElement(codeEl);
+               }
+          });
+
+
+          let activeSection = 'react';
+
+          const navButtons = document.querySelectorAll('.nav-btn');
+          const snippets = document.querySelectorAll('.snippet');
+          const searchBox = document.getElementById('searchBox');
+
+          // NAVBAR
+          navButtons.forEach(btn => {
+               btn.addEventListener('click', () => {
+
+                    navButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    activeSection = btn.dataset.section;
+
+                    filterSnippets();
+               });
+          });
+
+          // SEARCH
+          searchBox.addEventListener('input', filterSnippets);
+
+          // FILTER FUNCTION (single logic)
+          function filterSnippets() {
+               const query = searchBox.value.toLowerCase().trim();
+
+               snippets.forEach(snippet => {
+                    const title = snippet.querySelector('.snippet-title').innerText.toLowerCase();
+                    const section = snippet.dataset.section;
+
+                    // 🔥 If searching → ignore section
+                    if (query.length > 0) {
+                         snippet.style.display = title.includes(query) ? 'block' : 'none';
+                    } else {
+                         // normal navbar filtering
+                         snippet.style.display = (section === activeSection) ? 'block' : 'none';
+                    }
+               });
+          }
+
+          // CLEAR SEARCH (but keep section)
+          document.addEventListener('click', (e) => {
+               if (!searchBox.contains(e.target)) {
+                    searchBox.value = '';
+                    filterSnippets();
+               }
+          });
+     </script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- 
+
+HTML        → language-html
+CSS         → language-css
+JavaScript  → language-javascript
+JSX         → language-jsx
+TypeScript  → language-typescript
+TSX         → language-tsx
+
+JSON        → language-json
+Bash/Shell  → language-bash
+ENV (.env)  → language-bash
+
+SQL         → language-sql
+PostgreSQL  → language-sql
+
+Python      → language-python
+Java        → language-java
+C           → language-c
+C++         → language-cpp
+C#          → language-csharp
+
+Go          → language-go
+Rust        → language-rust
+PHP         → language-php
+
+Markdown    → language-markdown
+YAML        → language-yaml
+XML         → language-xml
+
+Dockerfile  → language-docker
+Git config  → language-git
+
+-->

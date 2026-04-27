@@ -8,7 +8,7 @@ No backend. No setup. Just open and use
 
 ##  Live Demo
 
- **Live at:** https://your-username.github.io/your-repo-name/
+ **Live at:** https://vijax03.github.io/my-code-snippets/
 
 ---
 
